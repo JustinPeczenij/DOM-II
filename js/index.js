@@ -49,9 +49,11 @@ document.addEventListener('wheel', ()=>{
 
 //Type 7
 const header = document.querySelector('.main-navigation');
-header.addEventListener('dblclick', (event)=>{
+body.addEventListener('dblclick', (event)=>{
     header.style.backgroundColor = 'red'
-    console.log(event)
+    console.log(event);
+    event.stopPropagation
+
 });
 
 //Type 8
@@ -69,8 +71,9 @@ document.addEventListener('select', (event)=>{
 });
 
 //Type 10
-const destination = document.querySelector('.content-destination')
+const destination = document.querySelector('p')
 window.addEventListener('load', (event)=>{
     destination.style.color = "red";
     console.log(event);
+    event.stopPropagation;
 });
